@@ -1,0 +1,823 @@
+ :root {
+      --bg: #ecf4ff;
+      --bg-strong: #e4f0ff;
+      --primary: #2f7df6;
+      --primary-dark: #1e63d4;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+      --card-bg: #ffffff;
+      --accent-green: #22c55e;
+      --accent-yellow: #facc15;
+      --accent-red: #ef4444;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.15);
+      --radius-lg: 28px;
+      --radius-xl: 32px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #f5f9ff, #e5f0ff);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding: 40px 40px 60px;
+      background: radial-gradient(circle at top left, #f4f8ff, #e6f1ff);
+      border-radius: 40px;
+      box-shadow: 0 20px 55px rgba(15, 23, 42, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.7), transparent 55%);
+      pointer-events: none;
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 1;
+      flex: 1.2;
+    }
+
+   /* Στο αρχείο style.css */
+
+.logo-icon {
+    width: 50px; /* Μείωσε το πλάτος για να είναι πιο συμπαγές */
+    height: 50px; /* Μείωσε το ύψος */
+    
+    background-image: url('../Assets/newlogos.png'); /* Διόρθωσε τη διαδρομή αν χρειάζεται */
+    background-size: contain; /* Κάνει την εικόνα να χωράει μέσα στο πλαίσιο χωρίς να κόβεται */
+    background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+    background-position: center; /* Κεντράρει την εικόνα μέσα στο πλαίσιο */
+
+    /* Πρόσθεσε αυτές τις ιδιότητες για να αφαιρέσεις το αρχικό σχήμα */
+    border-radius: 0; /* Αφαιρεί τυχόν καμπύλες που μπορεί να υπήρχαν */
+    overflow: hidden; /* Κρύβει οτιδήποτε ξεχειλίζει */
+    display: none;
+}
+
+.drop-inner {
+    display: none; /* Κρύβει εντελώς το αρχικό εσωτερικό "σταγονίδιο" */
+}
+
+/* Αν το hero-logo έχει padding που δημιουργεί κενό, ίσως χρειαστεί να το προσαρμόσεις */
+.hero-logo {
+    display: flex; /* Βεβαιώνει ότι το λογότυπο και το κείμενο είναι δίπλα-δίπλα */
+    align-items: center; /* Ευθυγραμμίζει κάθετα τα στοιχεία */
+    gap: 10px; /* Προσθέτει ένα μικρό κενό μεταξύ εικόνας και κειμένου */
+}
+
+
+/* Ορίζει το μέγεθος για τη ΝΕΑ εικόνα που βάλαμε στο HTML */
+.logo-image {
+    width: 100px; /* Όρισε το πλάτος που θέλεις (π.χ. 40px) */
+    height: 100px; /* Όρισε το ύψος που θέλεις (π.χ. 40px) */
+    /* Αν χρειάζεται να είναι κυκλική ή με γωνίες, χρησιμοποίησε border-radius */
+    border-radius: 50%;
+}
+
+/* Βεβαιώσου ότι το κείμενο και η εικόνα ευθυγραμμίζονται σωστά */
+.hero-logo {
+    display: flex;
+    align-items: center; /* Ευθυγραμμίζει την εικόνα και το κείμενο στη μέση */
+    gap: 10px;
+}
+    .logo-icon::before {
+      content: "";
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      position: absolute;
+      top: -6px;
+      right: -4px;
+      display: none;
+    }
+
+    .drop-inner {
+      width: 26px;
+      height: 36px;
+      background: #ffffff;
+      border-radius: 16px 16px 22px 22px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+    }
+
+    .drop-inner::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid #1d4ed8;
+    }
+
+    .logo-text-main {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-title span.highlight {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 460px;
+    }
+
+    .hero-subtitle + .hero-subtitle {
+      margin-top: 4px;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      font-size: 15px;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+        color 0.15s ease, border-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(37, 99, 235, 0.55);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(148, 163, 184, 0.7);
+      color: var(--text-main);
+      box-shadow: 0 8px 20px rgba(148, 163, 184, 0.28);
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(148, 163, 184, 0.8);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    .hero-right {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .phone {
+      width: 280px;
+      height: 540px;
+      background: #f9fbff;
+      border-radius: 46px;
+      box-shadow: var(--shadow-soft);
+      padding: 20px 16px;
+      position: relative;
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.4);
+    }
+
+    .phone-screen {
+      margin-top: 18px;
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      background: #e5f4ff;
+      position: relative;
+    }
+
+    /* Map-like grid */
+
+    .map-grid {
+      position: absolute;
+      inset: 12px 10px;
+      background: #d7f1ff;
+      border-radius: 24px;
+      box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.3);
+      overflow: hidden;
+    }
+
+    .map-grid::before,
+    .map-grid::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.7) 1px,
+          transparent 1px
+        ),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.7;
+    }
+
+    .marker {
+      position: absolute;
+      width: 26px;
+      height: 34px;
+      border-radius: 14px 14px 22px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #ffffff;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
+    }
+
+    .marker::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: inherit;
+    }
+
+    .marker.green {
+      background: var(--accent-green);
+    }
+
+    .marker.yellow {
+      background: var(--accent-yellow);
+      color: #92400e;
+    }
+
+    .marker.red {
+      background: var(--accent-red);
+    }
+
+    .marker.m1 {
+      top: 26%;
+      left: 18%;
+    }
+
+    .marker.m2 {
+      top: 42%;
+      left: 40%;
+    }
+
+    .marker.m3 {
+      top: 18%;
+      right: 16%;
+    }
+
+    .marker.m4 {
+      top: 62%;
+      right: 18%;
+    }
+
+    .marker.m5 {
+      bottom: 16%;
+      left: 24%;
+    }
+
+    .marker.m6 {
+      bottom: 24%;
+      right: 30%;
+    }
+
+    /* ---------- SECTION TITLES ---------- */
+
+    .section {
+      margin-top: 80px;
+    }
+
+    .section-title-center {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .section-title-center h2 {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .section-title-center p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    /* ---------- FEATURES (phones) ---------- */
+
+    .features-phones {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .phone-secondary {
+      width: 250px;
+      height: 480px;
+      background: #f9fbff;
+      border-radius: 40px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      padding: 18px 14px;
+      overflow: hidden;
+    }
+
+    .phone-secondary::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.45);
+    }
+
+    .phone-secondary-screen {
+      position: absolute;
+      inset: 32px 10px 12px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #e3f0ff, #cbd9ff);
+    }
+
+    /* Left secondary: map only */
+    .phone-secondary.map-only .phone-secondary-screen {
+      background: #d7f1ff;
+    }
+
+    .phone-secondary.map-only .phone-secondary-screen::before,
+    .phone-secondary.map-only .phone-secondary-screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.65) 1px,
+          transparent 1px
+        ),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.65) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    /* Middle secondary: simple list */
+    .phone-list-header {
+      height: 52px;
+      background: #1d4ed8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      color: #e5e7eb;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .phone-list-items {
+      padding: 10px 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .list-card {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .list-thumb {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #1d4ed8, #60a5fa);
+    }
+
+    .list-text-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .list-text-sub {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 3px;
+    }
+
+    .list-text-meta {
+      font-size: 11px;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    /* Right secondary: hydrant detail “card” */
+
+    .phone-detail-map {
+      height: 42%;
+      background: linear-gradient(120deg, #cfe5ff, #93c5fd);
+    }
+
+    .phone-detail-bottom {
+      height: 58%;
+      background: #f9fafb;
+      border-radius: 22px 22px 0 0;
+      margin-top: -12px;
+      padding: 10px 12px;
+      box-shadow: 0 -6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    .phone-detail-header {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .hydrant-thumb {
+      width: 46px;
+      height: 60px;
+      border-radius: 12px;
+      background: linear-gradient(160deg, #ef4444, #f97316);
+    }
+
+    .phone-detail-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .phone-detail-sub {
+      font-size: 11px;
+      color: #6b7280;
+      line-height: 1.25;
+    }
+
+    .phone-detail-actions {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .detail-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: #e5f3ff;
+    }
+
+    .detail-pill-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: #2563eb;
+    }
+
+    /* ---------- FEATURE TABS + CARDS ---------- */
+
+    .feature-tabs {
+      margin-top: 72px;
+      background: radial-gradient(circle at top, #f4f7ff, #e5f0ff);
+      border-radius: 40px;
+      padding: 26px 30px 30px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .tabs-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      padding-bottom: 12px;
+    }
+
+    .tab-item {
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 8px;
+      cursor: pointer;
+      position: relative;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-item span.icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(148, 163, 184, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .tab-item.active {
+      color: var(--primary-dark);
+    }
+
+    .tab-item.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    }
+
+    .tab-description {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 26px;
+    }
+
+    .feature-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 140px;
+    }
+
+    .feature-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .feature-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #e0edff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .feature-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .feature-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ---------- CTA SECTION ---------- */
+
+    .cta-section {
+      margin-top: 72px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .cta-buttons {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-large {
+      padding: 14px 30px;
+      font-size: 15px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 960px) {
+      .hero {
+        flex-direction: column;
+        padding: 32px 24px 40px;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .features-phones {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-container {
+        padding: 20px 14px 60px;
+      }
+
+      .hero {
+        border-radius: 26px;
+        padding: 24px 18px 32px;
+        gap: 30px;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .features-phones {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .feature-tabs {
+        padding: 22px 16px 24px;
+      }
+
+      .tabs-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .feature-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+    /* Ρυθμίζει την εικόνα ώστε να έχει συγκεκριμένες διαστάσεις */
+.logo-image2 {
+    width: 350px; 
+    height: 140px; 
+    display: block; /* Βοηθάει στην καλύτερη ευθυγράμμιση */
+    border: none; /* Αφαιρεί το μπλε περίγραμμα (αν εμφανίζεται) */
+}
+
+/* Ρυθμίζει την ετικέτα του συνδέσμου, αν χρειαστεί */
+.logo-link {
+    display: inline-block; /* Επιτρέπει να ορίσουμε πλάτος/ύψος στον σύνδεσμο αν χρειαστεί */
+    /* ... εδώ μπορείς να προσθέσεις ό,τι στυλ θέλεις ... */
+}
+.logo-image3 {
+    width: 250px; 
+    height: 500px; 
+    display: block; /* Βοηθάει στην καλύτερη ευθυγράμμιση */
+    border: none; /* Αφαιρεί το μπλε περίγραμμα (αν εμφανίζεται) */
+}
+
+.logo-image4 {
+    width: 220px; 
+    height: 480px; 
+    display: block; /* Βοηθάει στην καλύτερη ευθυγράμμιση */
+    border: none; /* Αφαιρεί το μπλε περίγραμμα (αν εμφανίζεται) */
+    border-radius: 20px;
+}

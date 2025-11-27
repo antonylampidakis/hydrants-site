@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HydrantsNearby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="page-container">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-logo">
+          <img src="newlogos.png" alt="HydrantsNearby Logo" class="logo-image">
+          
+          <div>
+            <div class="logo-text-main">HydrantsNearby</div>
+            
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+         Εντοπίστε πυροσβεστικούς κρουνούς<br />
+          <span class="highlight">Κοντά σας σε δευτερόλεπτα</span>
+        </h1>
+
+        <p class="hero-subtitle">
+         Η HydrantsNearby είναι μια mobile εφαρμογή που σας επιτρέπει να εντοπίζετε πυροσβεστικούς κρουνούς 
+σε διαδραστικό χάρτη και να σας καθοδηγεί σε αυτούς. Προσφέρει γρήγορη αναζήτηση, εύκολη πλοήγηση ,<br>
+φίλτρα και χρήσιμες πληροφορίες για τον κάθε κρουνό . 
+        </p>
+
+        <div class="hero-cta">
+         
+          <div class="header-logo-area">
+                <a href="https://play.google.com/store/apps/details?id=com.antonymapidakis.hydrantsnearby" class="logo-link">
+                    
+                    <img src="playstore.png" alt="HydrantsNearby Logo" class="logo-image2">
+                    
+                </a>
+            </div> 
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="phone">
+          <div class="phone-screen">
+            <img src="Greek-start-light.png" alt="HydrantsNearby Logo" class="logo-image3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES: PHONES -->
+    <section class="section" id="features">
+      <div class="section-title-center">
+        <h2>Αναβαθμίστε την Επιχειρησιακή σας Ετοιμότητα</h2>
+        <p>Το Απόλυτο Εργαλείο  για Άμεση Πρόσβαση στους Κρουνούς.</p>
+      </div>
+
+      <div class="features-phones">
+        <!-- Left phone (map only) -->
+        <div class="phone-secondary map-only">
+           <img src="Greek-start-dark.png" alt="HydrantsNearby Logo" class="logo-image4">
+        </div>
+
+        <!-- Middle phone (list) -->
+        <div class="phone-secondary">
+           <img src="Greek-general filter-light.png" alt="HydrantsNearby Logo" class="logo-image4">
+        </div>
+
+        <!-- Right phone (hydrant detail) -->
+        <div class="phone-secondary">
+           <img src="Greek-points-dark.png" alt="HydrantsNearby Logo" class="logo-image4">
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE TABS + CARDS -->
+    <section class="section" id="feature-tabs">
+      <div class="feature-tabs">
+        <div class="tabs-row">
+          <div class="tab-item active">
+            <span class="icon">🗺</span>
+            Διαδραστική Προβολή Χάρτη
+          </div>
+          <div class="tab-item">
+            <span class="icon">☰</span>
+           Αναλυτικές Λίστες
+          </div>
+          <div class="tab-item">
+            <span class="icon">ℹ</span>
+            Λεπτομέρειες Κρουνού
+          </div>
+        </div>
+
+        <p class="tab-description">
+          Δείτε όλους τους κρουνούς σε μια  περιοχή  με δείκτες κωδικοποιημένους με χρώμα, που υποδεικνύουν την επιχειρησιακή τους κατάσταση. Προβολή πληροφορίων κάθε κρουνού όπως τοποθεσία , ημερομηνία επιθεώρησης, κατάσταση , ... .
+        </p>
+
+        <div class="feature-card-grid">
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <div class="feature-icon">🔎</div>
+              <div class="feature-title">Φίλτρα</div>
+            </div>
+            <p class="feature-text">
+              Δυνατότητα φιλτραρίσματος των κρουνών βάσει της κατάστασης, της απόστασης ή της της ύπαρξης σύνδεσης storz . 
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <div class="feature-icon">📍</div>
+              <div class="feature-title">Πλοήγηση GPS</div>
+            </div>
+            <p class="feature-text">
+              Aμεσες οδηγίες πλοήγησης  από το σημείο της συσκευής σε οποιονδήποτε κρουνο 
+            </p>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Επικοινωνία</h2>
+    
+
+      <div class="cta-buttons">
+        
+        <a href="#" class=" btn btn-primary btn-large">
+          Email  : info@hydrantsnearby.gr 
+        </a>
+      </div>
+<br>
+      <p>©HydrantsNearBy 2025</p>
+    </section>
+  </div>
+</body>
+</html>
