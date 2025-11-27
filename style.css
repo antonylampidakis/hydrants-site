@@ -109,7 +109,7 @@ a {
     height: 100%; 
     display: block;
     border: none;
-    object-fit: cover; /* Καλύπτει το χώρο χωρίς να παραμορφώνεται */
+    object-fit: contain; /* Καλύπτει το χώρο χωρίς να παραμορφώνεται */
 }
 
 /* Ρύθμιση για τις εικόνες των δευτερευουσών συσκευών */
@@ -119,7 +119,7 @@ a {
     display: block; 
     border: none; 
     border-radius: 28px; /* Ταιριάζει με το border-radius του .phone-secondary-screen */
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .logo-text-main {
@@ -582,3 +582,4 @@ a {
     /* grid-column: span 2; αναγκάζει το στοιχείο να καλύψει 2 στήλες */
     grid-column: span 2; 
 }
+
