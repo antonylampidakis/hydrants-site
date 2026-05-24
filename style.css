@@ -158,8 +158,9 @@ a {
 
 .hero-cta {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     margin-top: 32px;
 }
 
@@ -583,3 +584,35 @@ a {
     grid-column: span 2; 
 }
 
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-left: 58px;
+    margin-top: -12px;
+}
+
+.social-links a {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.24);
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+}
